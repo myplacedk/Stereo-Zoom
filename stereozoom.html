@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Crossviewer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+  	<link rel="stylesheet" type="text/css" href="stereozoom.css" />
+	<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="stereozoom.js"></script>
+</head>
+<body><div id="viewer">
+	<div id="left">
+		<div id="lefttoolbox">
+			<button onclick="doZoomIn(1)">Zoom in (+)</button>
+			<button onclick="doZoomOut(1)">Zoom out (-)</button>
+			<button onclick="doZoom1()">Zoom 100% (1)</button>
+			<button onclick="doZoomFit()">Zoom to fit (f)</button>
+			<button onclick="doPush()">Push (a)</button>
+			<button onclick="doPull()">Pull (z)</button>
+			<button onclick='doSwap()'>Swap (s)</button>
+		</div>
+		<div id="leftwrapper"><img id="leftimg" draggable="false"></div>
+	</div><div class="middle"></div><div id="right">
+		<div id="rightwrapper"><img id="rightimg" draggable="false"></div>
+	</div>
+</div></body></html>

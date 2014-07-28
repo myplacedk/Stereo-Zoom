@@ -1,0 +1,86 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#viewer {
+	height: 100%;
+	width: 100%;
+/*	position: absolute;
+	top: 0;
+	left: 0;*/
+}
+#lefttoolbox, #righttoolbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	opacity: 0;
+	transition: opacity .3s;
+}
+#righttoolbox {
+	left: 2px;
+}
+#lefttoolbox button:active {
+	position: relative;
+	left: 2px;
+}
+#righttoolbox button:active {
+	position: relative;
+	left: -2px;
+}
+#left, #right {
+	display: inline-block;
+	width: 49%;
+	height: 100%;
+	background-color: black;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+	border: 24px solid rgba(255,255,255,.75);
+	padding: 16px;
+	background-image: url(texture.jpg)	;
+}
+.middle {
+	display: inline-block;
+	width: 2%;
+	height: 100%;
+	background-color: black;
+	box-sizing: border-box;
+	position: relative;
+}
+#leftwrapper, #rightwrapper {
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	transition: width .3s, height .3s, top .3s, left .3s;
+}
+#leftwrapper.notransition, #rightwrapper.notransition {
+	transition: none;
+}
+#leftwrapper {
+}
+#rightwrapper {
+}
+#leftimg, #rightimg {
+	position: absolute;
+	top: 0px;
+	width: 200%;
+	height: 100%;
+}
+#leftimg {
+	left: 0;
+}
+#rightimg {
+	right: 0;
+}
+.swapped #leftimg {
+	right: 0;
+	left: auto;
+}
+.swapped #rightimg {
+	left: 0;
+	right: auto;
+}
